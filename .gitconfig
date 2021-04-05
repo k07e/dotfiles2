@@ -1,0 +1,6 @@
+[credential]
+	helper = store
+[include]
+	path = ~/.gitconfig.local
+[init]
+	defaultBranch = main
