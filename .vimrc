@@ -7,5 +7,6 @@ endif
 call plug#begin()
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/vim-lexiv'
 
 call plug#end()
