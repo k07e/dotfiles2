@@ -14,6 +14,9 @@ find \
     'mkdir -pv "$HOME/$(dirname "%")";' \
     'ln -fsv "$PWD/%" "$HOME/%"'
   )"
+
+# or shorter
+./install.sh
 ```
 
 ## Uninstall
@@ -27,6 +30,9 @@ find \
   -type f -name uninstall.sh  -prune -o \
   -type f -print |
   xargs -P0 -I% rm -fv "$HOME/%"
+
+# or shorter
+./uninstall.sh
 ```
 
 ## Settings
