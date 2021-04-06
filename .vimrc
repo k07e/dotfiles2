@@ -7,6 +7,11 @@ endif
 call plug#begin()
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'lifepillar/vim-gruvbox8'
 Plug 'mattn/vim-lexiv'
 
 call plug#end()
+
+set background=dark
+set termguicolors
+colorscheme gruvbox8_hard
