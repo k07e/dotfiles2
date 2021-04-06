@@ -1,3 +1,8 @@
+" look
+set cursorline
+set laststatus=2
+set number
+
 " https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
