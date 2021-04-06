@@ -24,3 +24,9 @@ find \
   -type f -print |
   xargs -P0 -I% rm -fv "$HOME/%"
 ```
+
+## Settings
+
+List of local configuration files:
+
+- `~/.gitconfig.local`
