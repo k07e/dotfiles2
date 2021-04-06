@@ -9,9 +9,9 @@ find \
   -type f -name README.md     -prune -o \
   -type f -print |
   xargs -P0 -I% bash -ce "$(printf %s \
-'mkdir -pv "$HOME/$(dirname "%")";' \
-'ln -fsv "$PWD/%" "$HOME/%"'
-)"
+    'mkdir -pv "$HOME/$(dirname "%")";' \
+    'ln -fsv "$PWD/%" "$HOME/%"'
+  )"
 ```
 
 ## Uninstall
