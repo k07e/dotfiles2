@@ -21,6 +21,19 @@ Plug 'mattn/vim-lexiv'
 " color scheme
 Plug 'lifepillar/vim-gruvbox8'
 
+" Language Server
+Plug 'prabirshrestha/vim-lsp'
+  Plug 'mattn/vim-lsp-settings'
+Plug 'liuchengxu/vista.vim'
+
+" autocompletion
+Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+" snippet
+Plug 'hrsh7th/vim-vsnip'
+  Plug 'hrsh7th/vim-vsnip-integ'
+
 call plug#end()
 
 " color scheme
