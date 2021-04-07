@@ -1,1 +1,16 @@
 # Created by newuser for 5.8
+
+# https://github.com/zdharma/zinit#option-2---manual-installation
+# change point: add if statements
+if [ ! -e ~/.zinit ]; then
+  mkdir ~/.zinit
+  git clone https://github.com/zdharma/zinit.git ~/.zinit/bin
+fi
+if [ -f ~/.zinit/bin/zinit.zsh ]; then
+  source ~/.zinit/bin/zinit.zsh
+fi
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
