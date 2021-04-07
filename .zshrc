@@ -16,6 +16,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light olets/zsh-abbr
+zinit ice from'gh-r' as'program'; zinit light junegunn/fzf
 
 if [ -f ~/.p10k.zsh ]; then
   source ~/.p10k.zsh
