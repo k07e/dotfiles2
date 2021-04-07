@@ -21,6 +21,10 @@ if [ -f ~/.p10k.zsh ]; then
   source ~/.p10k.zsh
 fi
 
+if [ -f ~/.zsh_aliases ]; then
+  source ~/.zsh_aliases
+fi
+
 if [ -f ~/.zsh_abbreviations ]; then
   source ~/.zsh_abbreviations
 fi
