@@ -1,0 +1,3 @@
+abbr -S --quiet l='ls -CF'
+abbr -S --quiet la='ls -A'
+abbr -S --quiet ll='ls -alF'

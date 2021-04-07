@@ -15,7 +15,12 @@ autoload -Uz _zinit
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit light olets/zsh-abbr
 
 if [ -f ~/.p10k.zsh ]; then
   source ~/.p10k.zsh
+fi
+
+if [ -f ~/.zsh_abbreviations ]; then
+  source ~/.zsh_abbreviations
 fi
