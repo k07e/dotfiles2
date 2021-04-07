@@ -122,4 +122,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then
+  source "$HOME/.cargo/env"
+fi
