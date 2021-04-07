@@ -38,9 +38,15 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/vim-vsnip-integ'
 
+" misc
+Plug 'edkolev/tmuxline.vim'
+
 call plug#end()
 
 " color scheme
 set background=dark
 set termguicolors
 colorscheme gruvbox8_hard
+
+" plugins settings
+let g:tmuxline_powerline_separators = 0
