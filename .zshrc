@@ -18,6 +18,7 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light olets/zsh-abbr
 zinit ice from'gh-r' as'program'; zinit light junegunn/fzf
 zinit ice from'gh-r' as'program' mv'ghq* -> ghq' pick'ghq/ghq'; zinit light x-motemen/ghq
+zinit light hlissner/zsh-autopair
 
 if [ -f ~/.p10k.zsh ]; then
   source ~/.p10k.zsh
