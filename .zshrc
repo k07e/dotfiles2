@@ -1,6 +1,6 @@
 # Created by newuser for 5.8
 
-# https://github.com/zdharma/zinit#option-2---manual-installation
+# ref: https://github.com/zdharma/zinit#option-2---manual-installation
 # change point: add if statements
 if [ ! -e ~/.zinit ]; then
   mkdir ~/.zinit

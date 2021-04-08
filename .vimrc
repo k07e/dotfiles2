@@ -3,11 +3,11 @@ set cursorline
 set laststatus=2
 set number
 
-" https://github.com/vim/vim/issues/3608#issuecomment-438487463
+" ref: https://github.com/vim/vim/issues/3608#issuecomment-438487463
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+" ref: https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
