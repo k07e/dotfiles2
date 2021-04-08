@@ -41,6 +41,9 @@ Plug 'hrsh7th/vim-vsnip'
 " misc
 Plug 'edkolev/tmuxline.vim'
 
+" language pack
+Plug 'sheerun/vim-polyglot'
+
 call plug#end()
 
 " color scheme
