@@ -7,4 +7,7 @@ fundle plugin jorgebucaran/hydro
 # auto-complete matching pairs
 fundle plugin jorgebucaran/autopair.fish
 
+# sparklines
+fundle plugin jorgebucaran/spark.fish
+
 fundle init
