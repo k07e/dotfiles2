@@ -11,3 +11,5 @@ fundle plugin jorgebucaran/autopair.fish
 fundle plugin jorgebucaran/spark.fish
 
 fundle init
+
+alias clear 'command clear; echo; echo; seq 1 (tput cols) | sort -R | spark; echo; echo'
