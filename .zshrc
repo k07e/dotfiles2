@@ -30,3 +30,13 @@ fi
 if [ -f ~/.zsh_abbreviations ]; then
   source ~/.zsh_abbreviations
 fi
+
+export PATH="$HOME/.local/bin:$PATH"
+
+function cdghf {
+  ghf_selected="$(ghf)"
+  if [ -z "$ghf_selected" ]; then
+    exit 1
+  fi
+  cd "$ghf_selected"
+}

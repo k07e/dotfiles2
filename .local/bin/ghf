@@ -1,0 +1,7 @@
+#!/bin/bash
+ghq_root="$(ghq root)"
+fzf_selected="$(ghq list | fzf --preview "ls -alF '$ghq_root/{}'")"
+if [ -z "$fzf_selected" ]; then
+  exit 1
+fi
+echo "$ghq_root/$fzf_selected"

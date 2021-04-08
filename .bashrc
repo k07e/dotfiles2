@@ -125,3 +125,13 @@ fi
 if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
 fi
+
+export PATH="$HOME/.local/bin:$HOME/.zinit/plugins/x-motemen---ghq/ghq:$HOME/.zinit/plugins/junegunn---fzf:$PATH"
+
+function cdghf {
+  ghf_selected="$(ghf)"
+  if [ -z "$ghf_selected" ]; then
+    exit 1
+  fi
+  cd "$ghf_selected"
+}
