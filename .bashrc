@@ -126,7 +126,7 @@ if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
 fi
 
-export PATH="$HOME/.local/bin:$HOME/.zinit/plugins/x-motemen---ghq/ghq:$HOME/.zinit/plugins/junegunn---fzf:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.zinit/plugins/x-motemen---ghq/ghq:$HOME/.zinit/plugins/junegunn---fzf:$PATH:$HOME/.zinit/plugins/greymd---tmux-xpanes/bin:"
 
 function cdghf {
   ghf_selected="$(ghf)"
