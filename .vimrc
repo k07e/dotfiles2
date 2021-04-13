@@ -48,6 +48,10 @@ Plug 'sheerun/vim-polyglot'
 " statusline/tabline
 Plug 'itchyny/lightline.vim'
 
+" enhance
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+
 call plug#end()
 
 " color scheme
@@ -69,3 +73,7 @@ let g:tmuxline_separators = {
   \   'right': '',
   \   'right_alt': '',
   \ }
+
+" ref: https://github.com/junegunn/limelight.vim#goyovim-integration
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
