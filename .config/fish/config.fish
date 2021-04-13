@@ -15,3 +15,4 @@ fundle init
 source ~/.config/fish/aliases.fish
 
 set -x EDITOR vim
+set -x MANPAGER 'nvim +Man!'

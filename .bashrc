@@ -137,3 +137,4 @@ function cdghf {
 }
 
 export EDITOR=vim
+export MANPAGER='nvim +Man!'
