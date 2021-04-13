@@ -64,8 +64,12 @@ if [ "$color_prompt" = yes ]; then
     PS1+='\[\033[03m\]at\[\033[00m\] '
     PS1+='\[\033[01;04;35m\]\W/\[\033[00m\] '
     PS1+='\[\033[01;33m\]\$\[\033[00m\] '
+
+    PS2='\[\033[01;33m\]>\[\033[00m\] '
 else
     PS1='\!: $? \u at \W/ \$ '
+
+    PS2='> '
 fi
 unset color_prompt force_color_prompt
 
