@@ -42,3 +42,5 @@ function cdghf {
   fi
   cd "$ghf_selected"
 }
+
+export EDITOR=vim

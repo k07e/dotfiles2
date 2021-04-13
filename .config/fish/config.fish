@@ -13,3 +13,5 @@ fundle plugin jorgebucaran/spark.fish
 fundle init
 
 source ~/.config/fish/aliases.fish
+
+set -x EDITOR vim
