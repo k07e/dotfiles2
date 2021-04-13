@@ -56,11 +56,16 @@ set termguicolors
 colorscheme gruvbox8_hard
 
 " plugins settings
-let g:tmuxline_powerline_separators = 0
 let g:lightline = {
   \   'colorscheme': 'gruvbox8',
   \   'separator': { 'left': '', 'right': '' },
   \   'subseparator': { 'left': '', 'right': '' },
   \   'tabline_separator': { 'left': '', 'right': '' },
   \   'tabline_subseparator': { 'left': '', 'right': '' },
+  \ }
+let g:tmuxline_separators = {
+  \   'left': '',
+  \   'left_alt': '',
+  \   'right': '',
+  \   'right_alt': '',
   \ }
