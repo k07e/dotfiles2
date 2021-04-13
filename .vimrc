@@ -2,6 +2,7 @@
 set cursorline
 set laststatus=2
 set number
+set showtabline=2
 
 " ref: https://github.com/vim/vim/issues/3608#issuecomment-438487463
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -44,6 +45,9 @@ Plug 'edkolev/tmuxline.vim'
 " language pack
 Plug 'sheerun/vim-polyglot'
 
+" statusline/tabline
+Plug 'itchyny/lightline.vim'
+
 call plug#end()
 
 " color scheme
@@ -53,3 +57,10 @@ colorscheme gruvbox8_hard
 
 " plugins settings
 let g:tmuxline_powerline_separators = 0
+let g:lightline = {
+  \   'colorscheme': 'gruvbox8',
+  \   'separator': { 'left': '', 'right': '' },
+  \   'subseparator': { 'left': '', 'right': '' },
+  \   'tabline_separator': { 'left': '', 'right': '' },
+  \   'tabline_subseparator': { 'left': '', 'right': '' },
+  \ }
