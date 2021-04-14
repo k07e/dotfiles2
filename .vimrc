@@ -54,6 +54,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'voldikss/vim-floaterm'
+Plug 'voldikss/vim-translator'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -90,7 +91,21 @@ let g:tmuxline_separators = {
   \ }
 let g:rainbow_active = 1
 let g:indent_guides_enable_on_vim_startup = 1
+let g:translator_target_lang = 'ja'
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+" ref: https://github.com/voldikss/vim-translator#key-mappings
+" Echo translation in the cmdline
+nmap <silent> <Leader>t <Plug>Translate
+vmap <silent> <Leader>t <Plug>TranslateV
+" Display translation in a window
+nmap <silent> <Leader>w <Plug>TranslateW
+vmap <silent> <Leader>w <Plug>TranslateWV
+" Replace the text with translation
+nmap <silent> <Leader>r <Plug>TranslateR
+vmap <silent> <Leader>r <Plug>TranslateRV
+" Translate the text in clipboard
+nmap <silent> <Leader>x <Plug>TranslateX
