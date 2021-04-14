@@ -53,6 +53,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'liuchengxu/vim-which-key'
+Plug 'voldikss/vim-floaterm'
 
 " Git
 Plug 'airblade/vim-gitgutter'
