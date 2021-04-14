@@ -112,3 +112,6 @@ nmap <silent> <Leader>r <Plug>TranslateR
 vmap <silent> <Leader>r <Plug>TranslateRV
 " Translate the text in clipboard
 nmap <silent> <Leader>x <Plug>TranslateX
+
+" 日本語ヘルプの優先順位を上げる
+set helplang=ja,en
