@@ -3,6 +3,7 @@ set cursorline
 set laststatus=2
 set number
 set showtabline=2
+set noshowmode
 
 " ref: https://github.com/vim/vim/issues/3608#issuecomment-438487463
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
