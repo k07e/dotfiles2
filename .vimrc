@@ -52,6 +52,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'lambdalisue/gina.vim'
+
 call plug#end()
 
 " color scheme
