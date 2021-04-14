@@ -52,6 +52,7 @@ Plug 'itchyny/lightline.vim'
 " enhance
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'liuchengxu/vim-which-key'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -67,6 +68,10 @@ call plug#end()
 set background=dark
 set termguicolors
 colorscheme gruvbox8_hard
+
+" key mappings
+nnoremap <silent> <Leader> :<C-u>WhichKey '<Bslash>'<CR>
+vnoremap <silent> <Leader> :<C-u>WhichKeyVisual '<Bslash>'<CR>
 
 " plugins settings
 let g:lightline = {
