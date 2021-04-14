@@ -56,6 +56,9 @@ Plug 'junegunn/limelight.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'lambdalisue/gina.vim'
 
+" look
+Plug 'luochen1990/rainbow'
+
 call plug#end()
 
 " color scheme
@@ -77,6 +80,7 @@ let g:tmuxline_separators = {
   \   'right': '',
   \   'right_alt': '',
   \ }
+let g:rainbow_active = 1
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
