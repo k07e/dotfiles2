@@ -58,6 +58,7 @@ Plug 'lambdalisue/gina.vim'
 
 " look
 Plug 'luochen1990/rainbow'
+Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 
@@ -81,6 +82,7 @@ let g:tmuxline_separators = {
   \   'right_alt': '',
   \ }
 let g:rainbow_active = 1
+let g:indent_guides_enable_on_vim_startup = 1
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
