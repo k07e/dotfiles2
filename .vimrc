@@ -64,6 +64,9 @@ Plug 'lambdalisue/gina.vim'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 
+" 日本語化
+Plug 'vim-jp/vimdoc-ja'
+
 call plug#end()
 
 " color scheme
