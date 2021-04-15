@@ -128,6 +128,13 @@ let g:which_key_map.p = {
   \ }
 let g:which_key_map.t = {
   \   'name': '+toggle',
+  \   'G': ['GitGutterToggle', 'GitGutter'],
+  \   'L': ['lightline#toggle()', 'lightline'],
+  \   'g': ['Goyo', 'Goyo'],
+  \   'i': ['IndentGuidesToggle', 'IndentGuides'],
+  \   'l': [':Limelight!!', 'Limelight'],
+  \   'r': ['RainbowToggle', 'Rainbow'],
   \   'u': ['UndotreeToggle', 'Undotree'],
+  \   'v': [':Vista!!', 'Vista'],
   \ }
 call which_key#register("\<Bslash>", 'g:which_key_map')
