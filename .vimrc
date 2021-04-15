@@ -98,6 +98,7 @@ let g:tmuxline_separators = {
 let g:rainbow_active = 1
 let g:indent_guides_enable_on_vim_startup = 1
 let g:translator_target_lang = 'ja'
+let g:undotree_WindowLayout = 3
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
