@@ -55,6 +55,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'liuchengxu/vim-which-key'
 Plug 'voldikss/vim-floaterm'
 Plug 'voldikss/vim-translator'
+Plug 'mbbill/undotree'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -115,3 +116,11 @@ nmap <silent> <Leader>x <Plug>TranslateX
 
 " 日本語ヘルプの優先順位を上げる
 set helplang=ja,en
+
+" Leader key mappings
+let g:which_key_map = {}
+let g:which_key_map.z = {
+  \   'name': '+toggle',
+  \   'u': ['UndotreeToggle', 'Undotree'],
+  \ }
+call which_key#register("\<Bslash>", 'g:which_key_map')
