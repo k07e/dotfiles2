@@ -103,23 +103,30 @@ autocmd! User GoyoLeave Limelight!
 
 " ref: https://github.com/voldikss/vim-translator#key-mappings
 " Echo translation in the cmdline
-nmap <silent> <Leader>t <Plug>Translate
-vmap <silent> <Leader>t <Plug>TranslateV
+nmap <silent> <Leader>pt <Plug>Translate
+vmap <silent> <Leader>pt <Plug>TranslateV
 " Display translation in a window
-nmap <silent> <Leader>w <Plug>TranslateW
-vmap <silent> <Leader>w <Plug>TranslateWV
+nmap <silent> <Leader>pw <Plug>TranslateW
+vmap <silent> <Leader>pw <Plug>TranslateWV
 " Replace the text with translation
-nmap <silent> <Leader>r <Plug>TranslateR
-vmap <silent> <Leader>r <Plug>TranslateRV
+nmap <silent> <Leader>pr <Plug>TranslateR
+vmap <silent> <Leader>pr <Plug>TranslateRV
 " Translate the text in clipboard
-nmap <silent> <Leader>x <Plug>TranslateX
+nmap <silent> <Leader>px <Plug>TranslateX
 
 " 日本語ヘルプの優先順位を上げる
 set helplang=ja,en
 
 " Leader key mappings
 let g:which_key_map = {}
-let g:which_key_map.z = {
+let g:which_key_map.p = {
+  \   'name': '+plug',
+  \   't': 'Translate',
+  \   'w': 'TranslateW',
+  \   'r': 'TranslateR',
+  \   'x': 'TranslateX',
+  \ }
+let g:which_key_map.t = {
   \   'name': '+toggle',
   \   'u': ['UndotreeToggle', 'Undotree'],
   \ }
