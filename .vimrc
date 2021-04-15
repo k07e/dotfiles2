@@ -117,6 +117,28 @@ nmap <silent> <Leader>px <Plug>TranslateX
 " 日本語ヘルプの優先順位を上げる
 set helplang=ja,en
 
+" TODO: support switching dark and light of g:lightline.colorscheme
+
+function BackgroundDark()
+  set background=dark
+  Tmuxline vim_statusline_1
+endfunction
+
+function BackgroundLight()
+  set background=light
+  Tmuxline vim_statusline_1
+endfunction
+
+function BackgroundToggle()
+  if &background == 'dark'
+    call BackgroundLight()
+  else
+    call BackgroundDark()
+  endif
+endfunction
+
+autocmd! VimLeavePre * call BackgroundDark()
+
 " Leader key mappings
 let g:which_key_map = {}
 let g:which_key_map.p = {
@@ -130,6 +152,7 @@ let g:which_key_map.t = {
   \   'name': '+toggle',
   \   'G': ['GitGutterToggle', 'GitGutter'],
   \   'L': ['lightline#toggle()', 'lightline'],
+  \   'b': ['BackgroundToggle()', 'background'],
   \   'g': ['Goyo', 'Goyo'],
   \   'i': ['IndentGuidesToggle', 'IndentGuides'],
   \   'l': [':Limelight!!', 'Limelight'],
