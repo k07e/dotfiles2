@@ -57,6 +57,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'voldikss/vim-floaterm'
 Plug 'voldikss/vim-translator'
 Plug 'mbbill/undotree'
+Plug 'preservim/nerdtree'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -157,6 +158,7 @@ let g:which_key_map.t = {
   \   'g': ['Goyo', 'Goyo'],
   \   'i': ['IndentGuidesToggle', 'IndentGuides'],
   \   'l': [':Limelight!!', 'Limelight'],
+  \   'n': ['NERDTreeToggle', 'NERDTree'],
   \   'r': ['RainbowToggle', 'Rainbow'],
   \   'u': ['UndotreeToggle', 'Undotree'],
   \   'v': [':Vista!!', 'Vista'],
