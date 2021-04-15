@@ -66,6 +66,7 @@ Plug 'lambdalisue/gina.vim'
 " look
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ryanoasis/vim-devicons'
 
 " 日本語化
 Plug 'vim-jp/vimdoc-ja'
