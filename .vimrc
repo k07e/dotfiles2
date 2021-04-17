@@ -81,6 +81,7 @@ colorscheme gruvbox8_hard
 " key mappings
 nnoremap <silent> <Leader> :<C-u>WhichKey '<Bslash>'<CR>
 vnoremap <silent> <Leader> :<C-u>WhichKeyVisual '<Bslash>'<CR>
+nnoremap <silent> <2-LeftMouse> :TranslateW<CR>
 
 " plugins settings
 let g:lightline = {
