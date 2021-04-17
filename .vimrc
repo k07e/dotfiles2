@@ -163,7 +163,11 @@ let g:which_key_map = {}
 let g:which_key_map.g = {
   \   'name': '+git',
   \   'a': [':FloatermNew --autoclose=1 git add -p', 'add -p'],
+  \   'c': [':Gina commit --opener=tabedit', 'commit'],
+  \   'd': [':Gina diff --opener=tabedit', 'diff'],
+  \   'l': [':Gina log --opener=tabedit', 'log'],
   \   'r': [':FloatermNew --autoclose=1 git rebase -i', 'rebase -i'],
+  \   's': [':Gina status --opener=tabedit', 'status'],
   \ }
 let g:which_key_map.p = {
   \   'name': '+plug',
