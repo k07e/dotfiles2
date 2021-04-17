@@ -154,6 +154,11 @@ autocmd! VimLeavePre * call BackgroundDark()
 
 " Leader key mappings
 let g:which_key_map = {}
+let g:which_key_map.g = {
+  \   'name': '+git',
+  \   'a': [':FloatermNew --autoclose=1 git add -p', 'add -p'],
+  \   'r': [':FloatermNew --autoclose=1 git rebase -i', 'rebase -i'],
+  \ }
 let g:which_key_map.p = {
   \   'name': '+plug',
   \   't': 'Translate',
