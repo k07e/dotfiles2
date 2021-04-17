@@ -109,6 +109,11 @@ let g:indent_guides_exclude_filetypes = [
   \   'nerdtree',
   \   'which_key',
   \ ]
+let g:rainbow_conf = {
+  \   'separately': {
+  \     'nerdtree': 0,
+  \   },
+  \ }
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
