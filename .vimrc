@@ -195,3 +195,36 @@ call which_key#register("\<Bslash>", 'g:which_key_map')
 
 " enable mouse
 set mouse=a
+
+" tmux-like key mappings
+function TmuxLike_CloseWindow()
+  let l:input = input('Close window? (y/n) ')
+  if l:input == 'y'
+    quit!
+  endif
+endfunction
+
+nnoremap <silent> [tmux-like] <Nop>
+nmap <silent> <C-k> [tmux-like]
+nnoremap <silent> <C-k><C-k> <C-k>
+
+nnoremap <silent> [tmux-like]" :belowright split<CR>
+nnoremap <silent> [tmux-like]% :vertical belowright vsplit<CR>
+nnoremap <silent> [tmux-like]1 :tabnext 1<CR>
+nnoremap <silent> [tmux-like]2 :tabnext 2<CR>
+nnoremap <silent> [tmux-like]3 :tabnext 3<CR>
+nnoremap <silent> [tmux-like]4 :tabnext 4<CR>
+nnoremap <silent> [tmux-like]5 :tabnext 5<CR>
+nnoremap <silent> [tmux-like]6 :tabnext 6<CR>
+nnoremap <silent> [tmux-like]7 :tabnext 7<CR>
+nnoremap <silent> [tmux-like]8 :tabnext 8<CR>
+nnoremap <silent> [tmux-like]9 :tabnext 9<CR>
+nnoremap <silent> [tmux-like]<Down> <C-w><Down>
+nnoremap <silent> [tmux-like]<Left> <C-w><Left>
+nnoremap <silent> [tmux-like]<Right> <C-w><Right>
+nnoremap <silent> [tmux-like]<Up> <C-w><Up>
+nnoremap <silent> [tmux-like]c :tabedit<CR>
+nnoremap <silent> [tmux-like]n :tabnext<CR>
+nnoremap <silent> [tmux-like]o <C-w>w
+nnoremap <silent> [tmux-like]p :tabprevious<CR>
+nnoremap <silent> [tmux-like]x :call TmuxLike_CloseWindow()<CR>
