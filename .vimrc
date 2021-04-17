@@ -72,6 +72,9 @@ Plug 'ryanoasis/vim-devicons'
 " 日本語化
 Plug 'vim-jp/vimdoc-ja'
 
+" support todo.txt
+Plug 'freitass/todo.txt-vim'
+
 call plug#end()
 
 " color scheme
