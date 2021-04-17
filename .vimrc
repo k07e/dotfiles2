@@ -174,3 +174,6 @@ let g:which_key_map.t = {
   \   'v': [':Vista!!', 'Vista'],
   \ }
 call which_key#register("\<Bslash>", 'g:which_key_map')
+
+" enable mouse
+set mouse=a
