@@ -164,6 +164,7 @@ autocmd! VimLeavePre * call BackgroundDark()
 let g:which_key_map = {}
 let g:which_key_map.g = {
   \   'name': '+git',
+  \   'R': [':FloatermNew --autoclose=1 git rebase --continue', 'rebase --continue'],
   \   'a': [':FloatermNew --autoclose=1 git add -p', 'add -p'],
   \   'c': [':Gina commit --opener=tabedit', 'commit'],
   \   'd': [':Gina diff --opener=tabedit', 'diff'],
