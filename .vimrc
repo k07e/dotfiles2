@@ -109,6 +109,7 @@ let g:indent_guides_exclude_filetypes = [
   \   'floaterm',
   \   'gina-status',
   \   'help',
+  \   'lisp',
   \   'man',
   \   'nerdtree',
   \   'which_key',
