@@ -79,6 +79,9 @@ Plug 'freitass/todo.txt-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'kana/vim-textobj-user'
+  Plug 'kana/vim-textobj-syntax'
+  Plug 'pianohacker/vim-textobj-indented-paragraph'
+  Plug 'preservim/vim-textobj-quote'
 
 call plug#end()
 
