@@ -75,6 +75,10 @@ Plug 'vim-jp/vimdoc-ja'
 " support todo.txt
 Plug 'freitass/todo.txt-vim'
 
+" editing
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
 call plug#end()
 
 " color scheme
