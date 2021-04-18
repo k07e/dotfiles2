@@ -117,6 +117,7 @@ let g:indent_guides_exclude_filetypes = [
 let g:rainbow_conf = {
   \   'separately': {
   \     'nerdtree': 0,
+  \     'todo': 0,
   \   },
   \ }
 let g:undotree_HighlightChangedText = 0
