@@ -78,6 +78,7 @@ Plug 'freitass/todo.txt-vim'
 " editing
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'kana/vim-textobj-user'
 
 call plug#end()
 
