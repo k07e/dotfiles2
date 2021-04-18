@@ -83,8 +83,11 @@ set termguicolors
 colorscheme gruvbox8_hard
 
 " key mappings
+let g:maplocalleader = "\<Space>"
 nnoremap <silent> <Leader> :<C-u>WhichKey '<Bslash>'<CR>
 vnoremap <silent> <Leader> :<C-u>WhichKeyVisual '<Bslash>'<CR>
+nnoremap <silent> <LocalLeader> :<C-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <LocalLeader> :<C-u>WhichKeyVisual '<Space>'<CR>
 nnoremap <silent> <2-LeftMouse> :TranslateW<CR>
 
 " plugins settings
