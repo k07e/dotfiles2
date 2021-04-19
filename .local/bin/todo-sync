@@ -1,8 +1,13 @@
 #!/bin/bash
-cat ~/todo.txt | docker run \
-  --interactive \
-  --rm \
-  --volume "$HOME/.config/rclone:/config/rclone" \
-  rclone/rclone \
-  --config /config/rclone/rclone.conf \
-  rcat main:/todo.txt
+if type docker >/dev/null 2>&1; then
+  cat ~/todo.txt | docker run \
+    --interactive \
+    --rm \
+    --volume "$HOME/.config/rclone:/config/rclone" \
+    rclone/rclone \
+    --config /config/rclone/rclone.conf \
+    rcat main:/todo.txt
+else
+  cat ~/todo.txt | rclone \
+    rcat main:/todo.txt
+fi
