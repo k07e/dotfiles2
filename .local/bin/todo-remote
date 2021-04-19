@@ -1,0 +1,7 @@
+#!/bin/bash
+docker run \
+  --rm \
+  --volume "$HOME/.config/rclone:/config/rclone" \
+  rclone/rclone \
+  --config /config/rclone/rclone.conf \
+  cat main:/todo.txt
