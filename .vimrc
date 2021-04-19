@@ -250,3 +250,6 @@ nnoremap <silent> [tmux-like]x :call TmuxLike_CloseWindow()<CR>
 " key mappings for todo
 autocmd FileType todo nnoremap <buffer><silent> <LocalLeader>S :FloatermNew --autoclose=1 todo-sync<CR>
 autocmd FileType todo nnoremap <buffer><silent> <LocalLeader>U :FloatermNew --autoclose=1 todo-update<CR>
+
+" reload file when changes
+set autoread
