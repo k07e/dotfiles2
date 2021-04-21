@@ -215,7 +215,7 @@ call which_key#register("\<Bslash>", 'g:which_key_map')
 set mouse=a
 
 " tmux-like key mappings
-function TmuxLike_CloseWindow()
+function TmuxLike_CloseTab()
   let l:input = input('Close tab? (y/n) ')
   if l:input == 'y'
     quit!
@@ -245,7 +245,7 @@ nnoremap <silent> [tmux-like]c :tabedit<CR>
 nnoremap <silent> [tmux-like]n :tabnext<CR>
 nnoremap <silent> [tmux-like]o <C-w>w
 nnoremap <silent> [tmux-like]p :tabprevious<CR>
-nnoremap <silent> [tmux-like]x :call TmuxLike_CloseWindow()<CR>
+nnoremap <silent> [tmux-like]x :call TmuxLike_CloseTab()<CR>
 
 " key mappings for todo
 autocmd FileType todo nnoremap <buffer><silent> <LocalLeader>S :FloatermNew --autoclose=1 todo-sync<CR>
