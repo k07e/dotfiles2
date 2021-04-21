@@ -216,7 +216,7 @@ set mouse=a
 
 " tmux-like key mappings
 function TmuxLike_CloseWindow()
-  let l:input = input('Close window? (y/n) ')
+  let l:input = input('Close tab? (y/n) ')
   if l:input == 'y'
     quit!
   endif
