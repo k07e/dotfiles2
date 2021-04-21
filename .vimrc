@@ -127,6 +127,7 @@ let g:indent_guides_exclude_filetypes = [
   \ ]
 let g:rainbow_conf = {
   \   'separately': {
+  \     'floaterm': 0,
   \     'nerdtree': 0,
   \     'todo': 0,
   \   },
