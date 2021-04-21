@@ -253,3 +253,6 @@ autocmd FileType todo nnoremap <buffer><silent> <LocalLeader>U :FloatermNew --au
 
 " reload file when changes
 set autoread
+
+" disable timeout
+set notimeout
