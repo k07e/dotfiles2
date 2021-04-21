@@ -135,7 +135,7 @@ export PATH="$HOME/.local/bin:$HOME/.zinit/plugins/x-motemen---ghq/ghq:$HOME/.zi
 function cdghf {
   ghf_selected="$(ghf)"
   if [ -z "$ghf_selected" ]; then
-    exit 1
+    return 1
   fi
   cd "$ghf_selected"
 }
