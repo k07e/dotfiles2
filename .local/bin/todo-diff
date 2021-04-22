@@ -1,0 +1,5 @@
+#!/bin/bash
+temp=$(mktemp --suffix=.todo.txt)
+trap "rm $temp" EXIT
+todo-remote >$temp
+nvim -d ~/todo.txt $temp
