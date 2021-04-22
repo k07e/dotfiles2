@@ -1,0 +1,8 @@
+#!/bin/bash
+text="$(termux-dialog text -t 'New To-do here')"
+text_code=$(jq .code <<< "$text")
+text_text=$(jq -r .text <<< "$text")
+if [[ $text_code -ne -1 || -z $text_text ]]; then
+  exit 1
+fi
+todo-append "$text_text"
