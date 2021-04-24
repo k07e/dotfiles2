@@ -83,6 +83,9 @@ Plug 'kana/vim-textobj-user'
   Plug 'pianohacker/vim-textobj-indented-paragraph'
   Plug 'preservim/vim-textobj-quote'
 
+" automatically save changes to disk
+Plug '907th/vim-auto-save'
+
 call plug#end()
 
 " color scheme
@@ -100,7 +103,19 @@ nnoremap <silent> <2-LeftMouse> :TranslateW<CR>
 
 " plugins settings
 let g:lightline = {
+  \   'active': {
+  \     'left': [
+  \       ['mode', 'autosave', 'paste'],
+  \       ['readonly', 'filename', 'modified'],
+  \     ],
+  \   },
   \   'colorscheme': 'gruvbox8',
+  \   'component': {
+  \     'autosave': '%{g:auto_save ? "AUTOSAVE" : ""}',
+  \   },
+  \   'component_visible_condition': {
+  \     'autosave': 'g:auto_save',
+  \   },
   \   'separator': { 'left': '', 'right': '' },
   \   'subseparator': { 'left': '', 'right': '' },
   \   'tabline_separator': { 'left': '', 'right': '' },
@@ -202,6 +217,7 @@ let g:which_key_map.t = {
   \   'name': '+toggle',
   \   'G': ['GitGutterToggle', 'GitGutter'],
   \   'L': ['lightline#toggle()', 'lightline'],
+  \   'a': ['AutoSaveToggle', 'AutoSave'],
   \   'b': ['BackgroundToggle()', 'background'],
   \   'g': ['Goyo', 'Goyo'],
   \   'i': ['IndentGuidesToggle', 'IndentGuides'],
