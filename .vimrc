@@ -133,8 +133,6 @@ let g:rainbow_conf = {
   \   },
   \ }
 let g:undotree_HighlightChangedText = 0
-let g:undotree_HighlightSyntaxAdd = 0
-let g:undotree_HighlightSyntaxChange = 0
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
