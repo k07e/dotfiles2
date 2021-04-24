@@ -134,6 +134,8 @@ let g:rainbow_conf = {
   \ }
 let g:undotree_HighlightChangedText = 0
 let g:undotree_HighlightChangedWithSign = 0
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
