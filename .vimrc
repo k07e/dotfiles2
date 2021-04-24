@@ -113,16 +113,18 @@ nnoremap <silent> <2-LeftMouse> :TranslateW<CR>
 let g:lightline = {
   \   'active': {
   \     'left': [
-  \       ['mode', 'autosave', 'paste'],
+  \       ['mode', 'eskk', 'autosave', 'paste'],
   \       ['readonly', 'filename', 'modified'],
   \     ],
   \   },
   \   'colorscheme': 'gruvbox8',
   \   'component': {
   \     'autosave': '%{g:auto_save ? "AUTOSAVE" : ""}',
+  \     'eskk': '%{eskk#is_enabled() ? eskk#statusline() : ""}',
   \   },
   \   'component_visible_condition': {
   \     'autosave': 'g:auto_save',
+  \     'eskk': 'eskk#is_enabled()',
   \   },
   \   'separator': { 'left': '', 'right': '' },
   \   'subseparator': { 'left': '', 'right': '' },
