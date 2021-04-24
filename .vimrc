@@ -223,6 +223,7 @@ let g:which_key_map.t = {
   \   'i': ['IndentGuidesToggle', 'IndentGuides'],
   \   'l': [':Limelight!!', 'Limelight'],
   \   'n': ['NERDTreeToggle', 'NERDTree'],
+  \   'p': [':set invpaste', 'paste'],
   \   'r': ['RainbowToggle', 'Rainbow'],
   \   'u': ['UndotreeToggle', 'Undotree'],
   \   'v': [':Vista!!', 'Vista'],
