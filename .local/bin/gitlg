@@ -9,4 +9,4 @@ GITLG_PRETTY+='%C(reverse 4) %ar %Creset'
 GITLG_PRETTY+='%C(4)%Creset%n'
 GITLG_PRETTY+='%n'
 GITLG_PRETTY+='# %B'
-git log --graph --name-status --pretty="$GITLG_PRETTY"
+git log --graph --patch --pretty="$GITLG_PRETTY" --stat
