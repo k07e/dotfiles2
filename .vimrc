@@ -1,3 +1,6 @@
+" cache directory
+let s:cache_dir = '~/.cache/k07e-dotfiles2'
+
 " look
 set cursorline
 set laststatus=2
@@ -88,6 +91,9 @@ Plug 'kana/vim-textobj-user'
 " automatically save changes to disk
 Plug '907th/vim-auto-save'
 
+" imput method
+Plug 'tyru/eskk.vim'
+
 call plug#end()
 
 " color scheme
@@ -153,6 +159,9 @@ let g:undotree_HighlightChangedText = 0
 let g:undotree_HighlightChangedWithSign = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
+let g:eskk#large_dictionary = {
+  \   'path': s:cache_dir . '/SKK-JISYO.L',
+  \ }
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
@@ -294,3 +303,8 @@ endfor
 
 " enable virtual editing
 set virtualedit=onemore
+
+" Install SKK-JISYO.L if not found
+if empty(glob(s:cache_dir . '/SKK-JISYO.L'))
+  silent execute '!curl -fLo ' . s:cache_dir . '/SKK-JISYO.L --create-dirs http://openlab.ring.gr.jp/skk/skk/dic/SKK-JISYO.L'
+endif
