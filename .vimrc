@@ -278,16 +278,16 @@ set notimeout
 
 " key mappings for insert mode
 inoremap <silent> jj <ESC>
-inoremap <silent> kh <C-o>h
-inoremap <silent> kj <C-o>j
-inoremap <silent> kk <C-o>k
-inoremap <silent> kl <C-o>l
+inoremap <silent> ]h <C-o>h
+inoremap <silent> ]j <C-o>j
+inoremap <silent> ]k <C-o>k
+inoremap <silent> ]l <C-o>l
 
 for i in range(1, 999)
-  execute 'inoremap <silent> k' . i . 'h <C-o>' . i . 'h'
-  execute 'inoremap <silent> k' . i . 'j <C-o>' . i . 'j'
-  execute 'inoremap <silent> k' . i . 'k <C-o>' . i . 'k'
-  execute 'inoremap <silent> k' . i . 'l <C-o>' . i . 'l'
+  execute 'inoremap <silent> ]' . i . 'h <C-o>' . i . 'h'
+  execute 'inoremap <silent> ]' . i . 'j <C-o>' . i . 'j'
+  execute 'inoremap <silent> ]' . i . 'k <C-o>' . i . 'k'
+  execute 'inoremap <silent> ]' . i . 'l <C-o>' . i . 'l'
 endfor
 
 " enable virtual editing
