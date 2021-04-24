@@ -258,3 +258,10 @@ set autoread
 
 " disable timeout
 set notimeout
+
+" key mappings for insert mode
+inoremap <silent> jj <ESC>
+inoremap <silent> kh <C-o>h
+inoremap <silent> kj <C-o>j
+inoremap <silent> kk <C-o>k
+inoremap <silent> kl <C-o>l
