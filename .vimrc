@@ -133,6 +133,7 @@ let g:rainbow_conf = {
   \   },
   \ }
 let g:undotree_HighlightChangedText = 0
+let g:undotree_HighlightChangedWithSign = 0
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
