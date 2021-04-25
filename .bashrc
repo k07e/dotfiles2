@@ -142,3 +142,4 @@ function cdghf {
 
 export EDITOR=vim
 export MANPAGER='nvim +Man!'
+export LESS='--mouse --raw-control-chars --wheel-lines=3'
