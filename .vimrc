@@ -247,7 +247,7 @@ let g:which_key_map.g = {
   \   'S': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git push', 'push'],
   \   'U': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git pull', 'pull'],
   \   'a': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git add -p', 'add -p'],
-  \   'c': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git commit', 'commit'],
+  \   'c': [':AsyncRun -mode=term -pos=top git commit', 'commit'],
   \   'd': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git diff', 'diff'],
   \   'l': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git lg', 'log'],
   \   'r': [':AsyncRun -mode=term -pos=top git rebase -i', 'rebase -i'],
