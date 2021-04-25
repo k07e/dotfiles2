@@ -95,8 +95,9 @@ Plug '907th/vim-auto-save'
 Plug 'tyru/eskk.vim'
 
 " run shell commands in background
-Plug 'skywind3000/asyncrun.vim'
-  Plug 'skywind3000/asyncrun.extra'
+Plug 'skywind3000/asynctasks.vim'
+  Plug 'skywind3000/asyncrun.vim'
+    Plug 'skywind3000/asyncrun.extra'
 
 call plug#end()
 
