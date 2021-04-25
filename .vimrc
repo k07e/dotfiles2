@@ -196,6 +196,7 @@ let g:indent_guides_start_level = 2
 let g:eskk#large_dictionary = {
   \   'path': s:cache_dir . '/SKK-JISYO.L',
   \ }
+let g:asynctasks_term_pos = 'floaterm'
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
@@ -343,3 +344,7 @@ set virtualedit=onemore
 if empty(glob(s:cache_dir . '/SKK-JISYO.L'))
   silent execute '!curl -fLo ' . s:cache_dir . '/SKK-JISYO.L --create-dirs http://openlab.ring.gr.jp/skk/skk/dic/SKK-JISYO.L'
 endif
+
+" for asynctasks.vim
+noremap <silent><f5> :AsyncTask file-run<cr>
+noremap <silent><f9> :AsyncTask file-build<cr>
