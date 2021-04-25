@@ -250,7 +250,7 @@ let g:which_key_map.g = {
   \   'c': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git commit', 'commit'],
   \   'd': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git diff', 'diff'],
   \   'l': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git lg', 'log'],
-  \   'r': [':AsyncRun -mode=term -pos=floaterm_reuse -position=bottomright git rebase -i', 'rebase -i'],
+  \   'r': [':AsyncRun -mode=term -pos=top git rebase -i', 'rebase -i'],
   \   's': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git status', 'status'],
   \ }
 let g:which_key_map.p = {
