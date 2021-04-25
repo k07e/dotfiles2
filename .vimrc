@@ -109,12 +109,21 @@ nnoremap <silent> <LocalLeader> :<C-u>WhichKey '<Space>'<CR>
 vnoremap <silent> <LocalLeader> :<C-u>WhichKeyVisual '<Space>'<CR>
 nnoremap <silent> <2-LeftMouse> :TranslateW<CR>
 
+function LightlineFileTypeSymbol()
+  return WebDevIconsGetFileTypeSymbol(expand('%'))
+endfunction
+
 " plugins settings
 let g:lightline = {
   \   'active': {
   \     'left': [
   \       ['mode', 'eskk', 'autosave', 'paste'],
   \       ['readonly', 'filename', 'modified'],
+  \     ],
+  \     'right': [
+  \       ['lineinfo'],
+  \       ['percent'],
+  \       ['fileformat', 'fileencoding', 'filetypesymbol'],
   \     ],
   \   },
   \   'colorscheme': 'gruvbox8',
@@ -125,6 +134,9 @@ let g:lightline = {
   \   'component_visible_condition': {
   \     'autosave': 'g:auto_save',
   \     'eskk': 'eskk#is_enabled()',
+  \   },
+  \   'component_function': {
+  \     'filetypesymbol': 'LightlineFileTypeSymbol',
   \   },
   \   'separator': { 'left': '', 'right': '' },
   \   'subseparator': { 'left': '', 'right': '' },
