@@ -244,6 +244,7 @@ autocmd! VimLeavePre * call BackgroundDark()
 let g:which_key_map = {}
 let g:which_key_map.g = {
   \   'name': '+git',
+  \   'L': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git reflog', 'reflog'],
   \   'S': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git push', 'push'],
   \   'U': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git pull', 'pull'],
   \   'a': [':AsyncRun -mode=term -pos=top git add -p', 'add -p'],
