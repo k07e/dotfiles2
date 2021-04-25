@@ -247,12 +247,12 @@ let g:which_key_map.g = {
   \   'R': [':FloatermNew --autoclose=1 git rebase --continue', 'rebase --continue'],
   \   'S': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git push', 'push'],
   \   'U': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git pull', 'pull'],
-  \   'a': [':FloatermNew --autoclose=1 git add -p', 'add -p'],
-  \   'c': [':Gina commit --opener=tabedit', 'commit'],
-  \   'd': [':Gina diff --opener=tabedit', 'diff'],
-  \   'l': [':Gina log --opener=tabedit', 'log'],
-  \   'r': [':FloatermNew --autoclose=1 git rebase -i', 'rebase -i'],
-  \   's': [':Gina status --opener=tabedit', 'status'],
+  \   'a': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git add -p', 'add -p'],
+  \   'c': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git commit', 'commit'],
+  \   'd': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git diff', 'diff'],
+  \   'l': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git lg', 'log'],
+  \   'r': [':AsyncRun -mode=term -pos=floaterm_reuse -position=bottomright git rebase -i', 'rebase -i'],
+  \   's': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git status', 'status'],
   \ }
 let g:which_key_map.p = {
   \   'name': '+plug',
