@@ -120,6 +120,10 @@ function LightlineFileFormatSymbol()
     \ &fileformat
 endfunction
 
+function LightlineTabDecleaseTabnum(n)
+  return string(a:n - 1)
+endfunction
+
 " plugins settings
 let g:lightline = {
   \   'active': {
@@ -148,6 +152,9 @@ let g:lightline = {
   \   },
   \   'separator': { 'left': '', 'right': '' },
   \   'subseparator': { 'left': '', 'right': '' },
+  \   'tab_component_function': {
+  \     'tabnum': 'LightlineTabDecleaseTabnum',
+  \   },
   \   'tabline_separator': { 'left': '', 'right': '' },
   \   'tabline_subseparator': { 'left': '', 'right': '' },
   \ }
@@ -280,15 +287,16 @@ nnoremap <silent> <C-k><C-k> <C-k>
 
 nnoremap <silent> [tmux-like]" :belowright split<CR>
 nnoremap <silent> [tmux-like]% :vertical belowright vsplit<CR>
-nnoremap <silent> [tmux-like]1 :tabnext 1<CR>
-nnoremap <silent> [tmux-like]2 :tabnext 2<CR>
-nnoremap <silent> [tmux-like]3 :tabnext 3<CR>
-nnoremap <silent> [tmux-like]4 :tabnext 4<CR>
-nnoremap <silent> [tmux-like]5 :tabnext 5<CR>
-nnoremap <silent> [tmux-like]6 :tabnext 6<CR>
-nnoremap <silent> [tmux-like]7 :tabnext 7<CR>
-nnoremap <silent> [tmux-like]8 :tabnext 8<CR>
-nnoremap <silent> [tmux-like]9 :tabnext 9<CR>
+nnoremap <silent> [tmux-like]0 :tabnext 1<CR>
+nnoremap <silent> [tmux-like]1 :tabnext 2<CR>
+nnoremap <silent> [tmux-like]2 :tabnext 3<CR>
+nnoremap <silent> [tmux-like]3 :tabnext 4<CR>
+nnoremap <silent> [tmux-like]4 :tabnext 5<CR>
+nnoremap <silent> [tmux-like]5 :tabnext 6<CR>
+nnoremap <silent> [tmux-like]6 :tabnext 7<CR>
+nnoremap <silent> [tmux-like]7 :tabnext 8<CR>
+nnoremap <silent> [tmux-like]8 :tabnext 9<CR>
+nnoremap <silent> [tmux-like]9 :tabnext 10<CR>
 nnoremap <silent> [tmux-like]<Down> <C-w><Down>
 nnoremap <silent> [tmux-like]<Left> <C-w><Left>
 nnoremap <silent> [tmux-like]<Right> <C-w><Right>
