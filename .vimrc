@@ -113,6 +113,13 @@ function LightlineFileTypeSymbol()
   return WebDevIconsGetFileTypeSymbol(expand('%'))
 endfunction
 
+function LightlineFileFormatSymbol()
+  return &fileformat == 'unix' ? '' :
+    \ &fileformat == 'dos' ? '' :
+    \ &fileformat == 'mac' ? '' :
+    \ &fileformat
+endfunction
+
 " plugins settings
 let g:lightline = {
   \   'active': {
@@ -123,7 +130,7 @@ let g:lightline = {
   \     'right': [
   \       ['lineinfo'],
   \       ['percent'],
-  \       ['fileformat', 'fileencoding', 'filetypesymbol'],
+  \       ['fileformatsymbol', 'fileencoding', 'filetypesymbol'],
   \     ],
   \   },
   \   'colorscheme': 'gruvbox8',
@@ -136,6 +143,7 @@ let g:lightline = {
   \     'eskk': 'eskk#is_enabled()',
   \   },
   \   'component_function': {
+  \     'fileformatsymbol': 'LightlineFileFormatSymbol',
   \     'filetypesymbol': 'LightlineFileTypeSymbol',
   \   },
   \   'separator': { 'left': '', 'right': '' },
