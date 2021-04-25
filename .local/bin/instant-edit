@@ -1,0 +1,6 @@
+#!/bin/bash
+set -u
+ext="$1"
+temp=$(mktemp --suffix=".$ext")
+trap "rm '$temp'" EXIT
+"$EDITOR" "$temp"
