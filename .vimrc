@@ -246,7 +246,7 @@ let g:which_key_map.g = {
   \   'name': '+git',
   \   'S': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git push', 'push'],
   \   'U': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git pull', 'pull'],
-  \   'a': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git add -p', 'add -p'],
+  \   'a': [':AsyncRun -mode=term -pos=top git add -p', 'add -p'],
   \   'c': [':AsyncRun -mode=term -pos=top git commit', 'commit'],
   \   'd': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git diff', 'diff'],
   \   'l': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git lg', 'log'],
