@@ -91,7 +91,7 @@ Plug 'kana/vim-textobj-user'
 " automatically save changes to disk
 Plug '907th/vim-auto-save'
 
-" imput method
+" input method
 Plug 'tyru/eskk.vim'
 
 call plug#end()
