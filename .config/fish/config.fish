@@ -14,6 +14,6 @@ fundle init
 
 source ~/.config/fish/aliases.fish
 
-set -x EDITOR vim
+set -x EDITOR editor
 set -x MANPAGER 'nvim +Man!'
 set -x LESS (echo -en '--mouse --raw-control-chars --wheel-lines=3 --prompt=\033[00m\033[43m \033[00m\033[33m\033[00m ')
