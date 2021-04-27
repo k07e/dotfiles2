@@ -64,6 +64,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'voldikss/vim-translator'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
+Plug 'justinmk/vim-sneak'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -197,6 +198,7 @@ let g:eskk#large_dictionary = {
   \   'path': s:cache_dir . '/SKK-JISYO.L',
   \ }
 let g:asynctasks_term_pos = 'floaterm'
+let g:sneak#label = 1
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
