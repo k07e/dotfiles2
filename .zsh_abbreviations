@@ -1,3 +1,5 @@
 abbr -S --quiet l='ls -CF'
 abbr -S --quiet la='ls -A'
 abbr -S --quiet ll='ls -alF'
+abbr -S --quiet e=editor
+abbr -S --quiet ie=instant-edit

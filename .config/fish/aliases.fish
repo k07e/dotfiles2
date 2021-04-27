@@ -4,3 +4,5 @@ alias todo-edit 'editor ~/todo.txt'
 alias l 'ls -CF'
 alias la 'ls -A'
 alias ll 'ls -alF'
+alias e editor
+alias ie instant-edit
