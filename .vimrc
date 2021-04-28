@@ -262,11 +262,11 @@ let g:which_key_map.g = {
   \   'S': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git push', 'push'],
   \   'U': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git pull', 'pull'],
   \   'a': [':AsyncRun -mode=term -pos=top git add -p', 'add -p'],
-  \   'c': [':AsyncRun -mode=term -pos=top git commit', 'commit'],
-  \   'd': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git diff', 'diff'],
-  \   'l': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git lg', 'log'],
+  \   'c': [':Gina commit --opener=tabedit', 'commit'],
+  \   'd': [':AsyncRun diff --opener=tabedit', 'diff'],
+  \   'l': [':Gina log --opener=tabedit', 'log'],
   \   'r': [':AsyncRun -mode=term -pos=top git rebase -i', 'rebase -i'],
-  \   's': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git status', 'status'],
+  \   's': [':Gina status --opener=tabedit', 'status'],
   \ }
 let g:which_key_map.p = {
   \   'name': '+plug',
