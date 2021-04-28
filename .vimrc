@@ -254,6 +254,8 @@ autocmd! VimLeavePre * call BackgroundDark()
 let g:which_key_map = {}
 let g:which_key_map.T = {
   \   'name': '+todo',
+  \   'S': [':FloatermNew --autoclose=1 todo-sync', 'sync'],
+  \   'U': [':FloatermNew --autoclose=1 todo-update', 'update'],
   \   'a': [':AsyncTask todo-append', 'append'],
   \ }
 let g:which_key_map.g = {
