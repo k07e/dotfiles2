@@ -46,6 +46,7 @@ Plug 'prabirshrestha/asyncomplete.vim'
 " snippet
 Plug 'hrsh7th/vim-vsnip'
   Plug 'hrsh7th/vim-vsnip-integ'
+  Plug 'rafamadriz/friendly-snippets'
 
 " misc
 Plug 'edkolev/tmuxline.vim'
