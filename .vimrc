@@ -252,6 +252,10 @@ autocmd! VimLeavePre * call BackgroundDark()
 
 " Leader key mappings
 let g:which_key_map = {}
+let g:which_key_map.T = {
+  \   'name': '+todo',
+  \   'a': [':AsyncTask todo-append', 'append'],
+  \ }
 let g:which_key_map.g = {
   \   'name': '+git',
   \   'L': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git reflog', 'reflog'],
