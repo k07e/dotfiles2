@@ -65,6 +65,7 @@ Plug 'voldikss/vim-translator'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'justinmk/vim-sneak'
+Plug 'tpope/vim-rsi'
 
 " Git
 Plug 'airblade/vim-gitgutter'
