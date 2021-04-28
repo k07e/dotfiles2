@@ -1,0 +1,10 @@
+#!/bin/bash
+if type sponge >/dev/null 2>&1; then
+  cat | sponge
+elif type sponge.bash >/dev/null 2>&1; then
+  cat | sponge.bash
+elif type sponge.fish >/dev/null 2>&1; then
+  cat | sponge.fish
+else
+  exit 1
+fi
