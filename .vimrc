@@ -130,11 +130,17 @@ function LightlineTabDecleaseTabnum(n)
   return string(a:n - 1)
 endfunction
 
+let g:is_educate_mode = 0
+function ToggleEducateWrapper()
+  ToggleEducate
+  let g:is_educate_mode = 1 - g:is_educate_mode
+endfunction
+
 " plugins settings
 let g:lightline = {
   \   'active': {
   \     'left': [
-  \       ['mode', 'eskk', 'autosave', 'paste'],
+  \       ['mode', 'eskk', 'autosave', 'educate', 'paste'],
   \       ['readonly', 'filename', 'modified'],
   \     ],
   \     'right': [
@@ -146,10 +152,12 @@ let g:lightline = {
   \   'colorscheme': 'gruvbox8',
   \   'component': {
   \     'autosave': '%{g:auto_save ? "AUTOSAVE" : ""}',
+  \     'educate': '%{g:is_educate_mode ? "EDUCATE" : ""}',
   \     'eskk': '%{eskk#is_enabled() ? eskk#statusline() : ""}',
   \   },
   \   'component_visible_condition': {
   \     'autosave': 'g:auto_save',
+  \     'educate': 'g:is_educate_mode',
   \     'eskk': 'eskk#is_enabled()',
   \   },
   \   'component_function': {
@@ -269,6 +277,7 @@ let g:which_key_map.t = {
   \   'L': ['lightline#toggle()', 'lightline'],
   \   'a': ['AutoSaveToggle', 'AutoSave'],
   \   'b': ['BackgroundToggle()', 'background'],
+  \   'e': ['ToggleEducateWrapper()', 'Educate'],
   \   'g': ['Goyo', 'Goyo'],
   \   'i': ['IndentGuidesToggle', 'IndentGuides'],
   \   'l': [':Limelight!!', 'Limelight'],
