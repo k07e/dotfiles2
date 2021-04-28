@@ -67,6 +67,7 @@ Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-rsi'
+Plug 'junegunn/vim-emoji'
 
 " Git
 Plug 'airblade/vim-gitgutter'
