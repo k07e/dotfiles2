@@ -1,0 +1,16 @@
+
+
+
+# COMMIT MESSAGE TEMPLATES (ref: https://gitmoji.dev/):
+# 🎨 :art: improve/update       - Improve structure / format of the code.
+# ⚡ :zap: improve performance  - Improve performance.
+# 🔥 :fire: remove              - Remove code or files.
+# 🐛 :bug: fix                  - Fix a bug.
+# ✨ :sparkles: add/update      - Introduce new features.
+# 📝 :memo: add/update document - Add or update documentation.
+# 💄 :lipstick: update look     - Add or update the UI and style files.
+# 🎉 :tada: first commit        - Begin a project.
+# ♻ :recycle: clean             - Refactor code.
+# ✏ :pencil2: fix typo          - Fix typos.
+# 🚚 :truck: change/rename      - Move or rename resources (e.g.: files, paths, routes).
+# 💥 :boom: breaking change:    - Introduce breaking changes.
