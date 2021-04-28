@@ -6,3 +6,4 @@ alias la 'ls -A'
 alias ll 'ls -alF'
 alias e editor
 alias ie instant-edit
+alias sponge sponge-wrapper
