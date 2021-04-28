@@ -361,3 +361,7 @@ endif
 " for asynctasks.vim
 noremap <silent><f5> :AsyncTask file-run<cr>
 noremap <silent><f9> :AsyncTask file-build<cr>
+
+" enable undofile
+set undofile
+let &undodir = expand(s:cache_dir) . '/vim/undo'
