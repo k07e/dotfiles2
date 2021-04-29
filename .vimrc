@@ -285,6 +285,15 @@ let g:which_key_map.p = {
   \   'r': 'TranslateR',
   \   'x': 'TranslateX',
   \ }
+let g:which_key_map.r = {
+  \   'name': '+repl',
+  \   'b': [':FloatermNew --autoclose=2 bash', 'bash'],
+  \   'f': [':FloatermNew --autoclose=2 fish', 'fish'],
+  \   'n': [':FloatermNew --autoclose=2 node', 'node'],
+  \   'p': [':FloatermNew --autoclose=2 python3', 'python'],
+  \   'r': [':FloatermNew --autoclose=2 irb', 'ruby'],
+  \   'z': [':FloatermNew --autoclose=2 zsh', 'zsh'],
+  \ }
 let g:which_key_map.t = {
   \   'name': '+toggle',
   \   'G': ['GitGutterToggle', 'GitGutter'],
