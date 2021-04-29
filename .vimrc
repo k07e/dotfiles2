@@ -393,3 +393,4 @@ function s:get_vim_info()
   return system((has('nvim') ? 'nvim' : 'vim') . ' --version | head --lines=1 | xargs echo -n')
 endfunction
 let g:startify_custom_header = startify#pad([s:get_vim_info()])
+let g:startify_change_to_dir = 0
