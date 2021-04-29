@@ -386,3 +386,9 @@ let g:floaterm_keymap_next = ']n'
 let g:floaterm_keymap_prev = ']p'
 let g:floaterm_keymap_show = ']a'
 let g:floaterm_keymap_toggle = ']y'
+
+" for startify
+function s:get_vim_info()
+  return system((has('nvim') ? 'nvim' : 'vim') . ' --version | head --lines=1 | xargs echo -n')
+endfunction
+let g:startify_custom_header = startify#pad([s:get_vim_info()])
