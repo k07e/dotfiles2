@@ -103,6 +103,9 @@ Plug 'skywind3000/asynctasks.vim'
   Plug 'skywind3000/asyncrun.vim'
     Plug 'skywind3000/asyncrun.extra'
 
+" start screen
+Plug 'mhinz/vim-startify'
+
 call plug#end()
 
 " color scheme
@@ -192,6 +195,7 @@ let g:indent_guides_exclude_filetypes = [
   \   'lisp',
   \   'man',
   \   'nerdtree',
+  \   'startify',
   \   'which_key',
   \ ]
 let g:rainbow_conf = {
