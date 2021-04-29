@@ -371,3 +371,14 @@ noremap <silent><f9> :AsyncTask file-build<cr>
 " enable undofile
 set undofile
 let &undodir = expand(s:cache_dir) . '/vim/undo'
+
+" for floaterm
+let g:floaterm_keymap_first = ']0'
+let g:floaterm_keymap_hide = ']d'
+let g:floaterm_keymap_kill = ']x'
+let g:floaterm_keymap_last = ']l'
+let g:floaterm_keymap_new = ']c'
+let g:floaterm_keymap_next = ']n'
+let g:floaterm_keymap_prev = ']p'
+let g:floaterm_keymap_show = ']a'
+let g:floaterm_keymap_toggle = ']y'
