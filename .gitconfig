@@ -7,4 +7,4 @@
 [init]
 	defaultBranch = main
 [commit]
-	template = /data/data/com.termux/files/home/.gitcommit
+	template = ~/.gitcommit
