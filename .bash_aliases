@@ -10,3 +10,4 @@ alias tl=todo-local
 alias tre=todo-remote
 alias tsy=todo-sync
 alias tu=todo-update
+alias tso=todo-sort
