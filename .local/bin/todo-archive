@@ -1,0 +1,3 @@
+#!/bin/bash
+grep '^x ' ~/todo.txt >~/done.txt
+sed -i 's/^x .*$//;/^$/d' ~/todo.txt
