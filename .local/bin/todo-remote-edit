@@ -1,0 +1,17 @@
+#!/bin/bash
+temp="$(mktemp --suffix=.todo.txt)"
+trap "rm '$temp'" EXIT
+todo-remote >"$temp"
+"$EDITOR" "$temp"
+if type docker >/dev/null 2>&1; then
+  cat "$temp" | docker run \
+    --interactive \
+    --rm \
+    --volume "$HOME/.config/rclone:/config/rclone" \
+    rclone/rclone \
+    --config /config/rclone/rclone.conf \
+    rcat main:/todo.txt
+else
+  cat "$temp" | rclone \
+    rcat main:/todo.txt
+fi
