@@ -1,0 +1,15 @@
+#!/bin/bash
+if type docker >/dev/null 2>&1; then
+  cat <(todo-done-remote) ~/done.txt |
+    sort -u | docker run \
+    --interactive \
+    --rm \
+    --volume "$HOME/.config/rclone:/config/rclone" \
+    rclone/rclone \
+    --config /config/rclone/rclone.conf \
+    rcat main:/done.txt
+else
+  cat <(todo-done-remote) ~/done.txt |
+    sort -u |
+    rclone rcat main:/done.txt
+fi

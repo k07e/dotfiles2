@@ -1,0 +1,11 @@
+#!/bin/bash
+if type docker >/dev/null 2>&1; then
+  docker run \
+    --rm \
+    --volume "$HOME/.config/rclone:/config/rclone" \
+    rclone/rclone \
+    --config /config/rclone/rclone.conf \
+    cat main:/done.txt
+else
+  rclone cat main:/done.txt
+fi
