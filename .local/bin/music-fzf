@@ -1,0 +1,7 @@
+#!/bin/bash
+set -u
+temp_dir="$(mktemp -d)"
+trap "rm -fr '$temp_dir'" EXIT
+file_selected="$(find ~/Music/ -type f | fzf --preview "ffmpeg -i '{}'")"
+ffmpeg -i "$file_selected" "${temp_dir}/a.mp3"
+play "${temp_dir}/a.mp3"
