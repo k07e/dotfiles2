@@ -1,7 +1,58 @@
 #!/bin/bash
 set -u
-temp_dir="$(mktemp -d)"
-trap "rm -fr '$temp_dir'" EXIT
+
+FLAG_MP3_ALWAYS=0
+
+function show-help {
+  cat << EOS
+music-fzf - lets listen to your favorite musics
+
+usage: music-fzf [option]
+
+basic options:
+
+  -h, --help
+    show help
+
+options:
+
+  --mp3-always
+    file convert to mp3 always
+
+EOS
+}
+
+# ref: https://qiita.com/akameco/items/0e932d8ec372b87ccb34
+while getopts ':-:h' opt; do
+  case "$opt" in
+    - )
+      case "$OPTARG" in
+        help )
+          show-help
+          exit
+          ;;
+        mp3-always )
+          FLAG_MP3_ALWAYS=1
+          ;;
+      esac
+      ;;
+    h )
+      show-help
+      exit
+      ;;
+  esac
+done
+
 file_selected="$(find ~/Music/ -type f | fzf --preview "ffmpeg -i '{}'")"
-ffmpeg -i "$file_selected" "${temp_dir}/a.mp3"
-play "${temp_dir}/a.mp3"
+[ -z "$file_selected" ] && exit 1
+
+if [ $FLAG_MP3_ALWAYS -ne 0 ]; then
+  temp_dir="$(mktemp -d)"
+  trap "rm -fr '$temp_dir'" EXIT
+  ffmpeg -i "$file_selected" "${temp_dir}/a.mp3"
+  target="${temp_dir}/a.mp3"
+else
+  target="$file_selected"
+fi
+
+play "$target"
