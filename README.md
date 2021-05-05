@@ -5,6 +5,8 @@
 ```
 find \
   -type d -name .git          -prune -o \
+  -type d -name docs          -prune -o \
+  -type d -name scripts       -prune -o \
   -type f -name .editorconfig -prune -o \
   -type f -name README.md     -prune -o \
   -type f -name install.sh    -prune -o \
@@ -24,6 +26,7 @@ find \
 ```
 find \
   -type d -name .git          -prune -o \
+  -type d -name scripts       -prune -o \
   -type f -name .editorconfig -prune -o \
   -type f -name README.md     -prune -o \
   -type f -name install.sh    -prune -o \
