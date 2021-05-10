@@ -277,22 +277,14 @@ function Colorscheme_gruvbox8()
   Tmuxline vim_statusline_1
 endfunction
 
-function BackgroundDark()
-  set background=dark
-endfunction
-
-function BackgroundLight()
-  set background=light
-endfunction
-
 function BackgroundToggle()
   if !g:can_toggle_colorscheme
     return
   endif
   if &background == 'dark'
-    call BackgroundLight()
+    set background=light
   else
-    call BackgroundDark()
+    set background=dark
   endif
   execute 'call Colorscheme_' . g:colorscheme_id . '()'
 endfunction
