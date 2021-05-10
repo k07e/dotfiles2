@@ -34,6 +34,7 @@ Plug 'mattn/vim-lexiv'
 
 " color scheme
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'tomasiser/vim-code-dark'
 
 " Language Server
 Plug 'prabirshrestha/vim-lsp'
@@ -251,25 +252,58 @@ set helplang=ja,en
 
 " TODO: support switching dark and light of g:lightline.colorscheme
 
+" ref: https://github.com/itchyny/lightline.vim/issues/258#issue-271260954
+function s:setLightlineColorscheme(name)
+  let g:lightline.colorscheme = a:name
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
+endfunction
+
+function Colorscheme_codedark()
+  let g:colorscheme_id = g:colors_name
+  let g:can_toggle_colorscheme = 0
+  set background=dark
+  colorscheme codedark
+  call s:setLightlineColorscheme(g:colors_name)
+  Tmuxline lightline_insert
+endfunction
+
+function Colorscheme_gruvbox8()
+  let g:colorscheme_id = 'gruvbox8'
+  let g:can_toggle_colorscheme = 1
+  colorscheme gruvbox8_hard
+  call s:setLightlineColorscheme('gruvbox8')
+  Tmuxline vim_statusline_1
+endfunction
+
 function BackgroundDark()
   set background=dark
-  Tmuxline vim_statusline_1
 endfunction
 
 function BackgroundLight()
   set background=light
-  Tmuxline vim_statusline_1
 endfunction
 
 function BackgroundToggle()
+  if !g:can_toggle_colorscheme
+    return
+  endif
   if &background == 'dark'
     call BackgroundLight()
   else
     call BackgroundDark()
   endif
+  execute 'call Colorscheme_' . g:colorscheme_id . '()'
 endfunction
 
-autocmd! VimLeavePre * call BackgroundDark()
+function ChangeTmuxlineWhenLeave()
+  set background=dark
+  colorscheme gruvbox8_hard
+  Tmuxline vim_statusline_1
+endfunction
+
+autocmd! VimLeavePre * call ChangeTmuxlineWhenLeave()
 
 " Leader key mappings
 let g:which_key_map = {}
@@ -278,6 +312,11 @@ let g:which_key_map.T = {
   \   'S': [':FloatermNew --autoclose=1 todo-sync', 'sync'],
   \   'U': [':FloatermNew --autoclose=1 todo-update', 'update'],
   \   'a': [':AsyncTask todo-append', 'append'],
+  \ }
+let g:which_key_map.c = {
+  \   'name': '+colorscheme',
+  \   'g': ['Colorscheme_gruvbox8()', 'gruvbox8'],
+  \   'c': ['Colorscheme_codedark()', 'codedark'],
   \ }
 let g:which_key_map.g = {
   \   'name': '+git',
