@@ -1,0 +1,8 @@
+#!/bin/bash
+t="$(mktemp -d)"
+trap "rm -fr '$t'" EXIT
+bash << /bash-template
+cat << /bash-template-cat
+$(cat | sed 's/\$/\\$/g;s/\\\$\\\$(/$(/g')
+/bash-template-cat
+/bash-template
