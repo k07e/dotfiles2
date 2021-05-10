@@ -3,6 +3,6 @@ t="$(mktemp -d)"
 trap "rm -fr '$t'" EXIT
 bash << /bash-template
 cat << /bash-template-cat
-$(cat | sed 's/\$/\\$/g;s/\\\$\\\$(/$(/g')
+$(cat | sed 's/\$/\\$/g;s/\\\$\\\$\((\|{\)/$\1/g')
 /bash-template-cat
 /bash-template
