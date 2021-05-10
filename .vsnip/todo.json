@@ -4,5 +4,35 @@
     "body": [
       "(D) ${VIM:system('date +%Y-%m-%d | xargs echo -n')} "
     ]
+  },
+  "todoa": {
+    "prefix": "todoa",
+    "body": [
+      "(A) ${VIM:system('date +%Y-%m-%d | xargs echo -n')} "
+    ]
+  },
+  "todob": {
+    "prefix": "todob",
+    "body": [
+      "(B) ${VIM:system('date +%Y-%m-%d | xargs echo -n')} "
+    ]
+  },
+  "todoc": {
+    "prefix": "todoc",
+    "body": [
+      "(C) ${VIM:system('date +%Y-%m-%d | xargs echo -n')} "
+    ]
+  },
+  "todod": {
+    "prefix": "todod",
+    "body": [
+      "(D) ${VIM:system('date +%Y-%m-%d | xargs echo -n')} "
+    ]
+  },
+  "todoe": {
+    "prefix": "todoe",
+    "body": [
+      "(E) ${VIM:system('date +%Y-%m-%d | xargs echo -n')} "
+    ]
   }
 }
