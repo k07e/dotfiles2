@@ -270,7 +270,9 @@ function Colorscheme_codedark()
   set background=dark
   colorscheme codedark
   call s:setLightlineColorscheme(g:colors_name)
-  Tmuxline lightline_insert
+  if $TMUX != ''
+    Tmuxline lightline_insert
+  endif
 endfunction
 
 function Colorscheme_gruvbox8()
@@ -278,7 +280,9 @@ function Colorscheme_gruvbox8()
   let g:can_toggle_colorscheme = 1
   colorscheme gruvbox8_hard
   call s:setLightlineColorscheme('gruvbox8')
-  Tmuxline vim_statusline_1
+  if $TMUX != ''
+    Tmuxline vim_statusline_1
+  endif
 endfunction
 
 function Colorscheme_photon()
@@ -286,7 +290,9 @@ function Colorscheme_photon()
   let g:can_toggle_colorscheme = 0
   colorscheme photon
   call s:setLightlineColorscheme('photon')
-  Tmuxline vim_statusline_1
+  if $TMUX != ''
+    Tmuxline vim_statusline_1
+  endif
 endfunction
 
 function BackgroundToggle()
