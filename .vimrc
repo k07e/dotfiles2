@@ -117,7 +117,7 @@ set background=dark
 set termguicolors
 colorscheme gruvbox8_hard
 let g:colorscheme_id = 'gruvbox8'
-let g:can_toggle_colorscheme = 1
+let g:can_toggle_background = 1
 
 " key mappings
 let g:maplocalleader = "\<Space>"
@@ -266,7 +266,7 @@ endfunction
 
 function Colorscheme_codedark()
   let g:colorscheme_id = g:colors_name
-  let g:can_toggle_colorscheme = 0
+  let g:can_toggle_background = 0
   set background=dark
   colorscheme codedark
   call s:setLightlineColorscheme(g:colors_name)
@@ -277,7 +277,7 @@ endfunction
 
 function Colorscheme_gruvbox8()
   let g:colorscheme_id = 'gruvbox8'
-  let g:can_toggle_colorscheme = 1
+  let g:can_toggle_background = 1
   colorscheme gruvbox8_hard
   call s:setLightlineColorscheme('gruvbox8')
   if $TMUX != ''
@@ -287,7 +287,7 @@ endfunction
 
 function Colorscheme_photon()
   let g:colorscheme_id = 'photon'
-  let g:can_toggle_colorscheme = 0
+  let g:can_toggle_background = 0
   colorscheme photon
   call s:setLightlineColorscheme('photon')
   if $TMUX != ''
@@ -296,7 +296,7 @@ function Colorscheme_photon()
 endfunction
 
 function BackgroundToggle()
-  if !g:can_toggle_colorscheme
+  if !g:can_toggle_background
     echoerr 'this colorscheme is not support to toggle background'
     return
   endif
