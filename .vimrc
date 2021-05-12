@@ -35,6 +35,7 @@ Plug 'mattn/vim-lexiv'
 " color scheme
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'tomasiser/vim-code-dark'
+Plug 'axvr/photon.vim'
 
 " Language Server
 Plug 'prabirshrestha/vim-lsp'
@@ -79,6 +80,7 @@ Plug 'lambdalisue/gina.vim'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ryanoasis/vim-devicons'
+Plug 'k07e/lightline-photon.vim'
 
 " 日本語化
 Plug 'vim-jp/vimdoc-ja'
@@ -279,6 +281,14 @@ function Colorscheme_gruvbox8()
   Tmuxline vim_statusline_1
 endfunction
 
+function Colorscheme_photon()
+  let g:colorscheme_id = 'photon'
+  let g:can_toggle_colorscheme = 0
+  colorscheme photon
+  call s:setLightlineColorscheme('photon')
+  Tmuxline vim_statusline_1
+endfunction
+
 function BackgroundToggle()
   if !g:can_toggle_colorscheme
     return
@@ -311,6 +321,7 @@ let g:which_key_map.c = {
   \   'name': '+colorscheme',
   \   'g': ['Colorscheme_gruvbox8()', 'gruvbox8'],
   \   'c': ['Colorscheme_codedark()', 'codedark'],
+  \   'p': ['Colorscheme_photon()', 'photon'],
   \ }
 let g:which_key_map.g = {
   \   'name': '+git',
