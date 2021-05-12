@@ -297,6 +297,7 @@ endfunction
 
 function BackgroundToggle()
   if !g:can_toggle_colorscheme
+    echoerr 'this colorscheme is not support to toggle background'
     return
   endif
   if &background == 'dark'
