@@ -114,6 +114,8 @@ call plug#end()
 set background=dark
 set termguicolors
 colorscheme gruvbox8_hard
+let g:colorscheme_id = 'gruvbox8'
+let g:can_toggle_colorscheme = 1
 
 " key mappings
 let g:maplocalleader = "\<Space>"
