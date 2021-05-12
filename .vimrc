@@ -158,7 +158,7 @@ let g:lightline = {
   \     'right': [
   \       ['lineinfo'],
   \       ['percent'],
-  \       ['fileformatsymbol', 'fileencoding', 'filetypesymbol'],
+  \       ['fileformatsymbol', 'filetypesymbol', 'fileencoding'],
   \     ],
   \   },
   \   'colorscheme': 'gruvbox8',
