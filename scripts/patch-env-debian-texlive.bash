@@ -1,5 +1,5 @@
 ./start-debian.sh << end
 {
-  apt-get install -y texlive-full
+  apt-fast install -y texlive-full
 } </dev/tty
 end
