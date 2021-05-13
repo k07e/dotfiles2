@@ -342,6 +342,7 @@ let g:which_key_map.c = {
 let g:which_key_map.g = {
   \   'name': '+git',
   \   'L': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git reflog', 'reflog'],
+  \   'R': [':AsyncRun -mode=term -pos=top git rebase --continue', 'rebase --continue'],
   \   'S': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git push', 'push'],
   \   'U': [':AsyncRun -mode=term -pos=floaterm -position=bottomright git pull', 'pull'],
   \   'a': [':AsyncRun -mode=term -pos=top git add -p', 'add -p'],
