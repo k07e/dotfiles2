@@ -4,8 +4,10 @@ pkg install wget openssl-tool proot -y &&
   bash debian.sh
 sed -i 's/\(TERM=\)$TERM/\1xterm-256color/' start-debian.sh
 ./start-debian.sh << end
-apt-get update
-apt-get upgrade -y
-apt-get install -y apt-utils
-apt-get install -y dialog
+{
+  apt-get update
+  apt-get upgrade -y
+  apt-get install -y apt-utils
+  apt-get install -y dialog
+} </dev/tty
 end
