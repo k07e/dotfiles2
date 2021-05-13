@@ -2,7 +2,7 @@ tab=$'\t'
 read -p 'input username: ' username
 read -sp 'input password: ' password
 ./start-debian.sh << end
-apt-fast install -y sudo
+apt-get install -y sudo
 useradd -m $username -s /bin/bash
 echo "$username:$password" | chpasswd
 echo "$username${tab}ALL=(ALL:ALL) ALL" >/etc/sudoers.d/$username
