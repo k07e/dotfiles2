@@ -273,6 +273,9 @@ function Colorscheme_codedark()
   if $TMUX != ''
     Tmuxline lightline_insert
   endif
+  if $HOME == '/data/data/com.termux/files/home'
+    silent execute '!ln -fs ~/.termux/gruvbox-colors.properties ~/.termux/colors.properties && reload-style-termux'
+  endif
 endfunction
 
 function Colorscheme_gruvbox8()
@@ -283,6 +286,9 @@ function Colorscheme_gruvbox8()
   if $TMUX != ''
     Tmuxline vim_statusline_1
   endif
+  if $HOME == '/data/data/com.termux/files/home'
+    silent execute '!ln -fs ~/.termux/gruvbox-colors.properties ~/.termux/colors.properties && reload-style-termux'
+  endif
 endfunction
 
 function Colorscheme_photon()
@@ -292,6 +298,9 @@ function Colorscheme_photon()
   call s:setLightlineColorscheme('photon')
   if $TMUX != ''
     Tmuxline vim_statusline_1
+  endif
+  if $HOME == '/data/data/com.termux/files/home'
+    silent execute '!ln -fs ~/.termux/purematte-colors.properties ~/.termux/colors.properties && reload-style-termux'
   endif
 endfunction
 

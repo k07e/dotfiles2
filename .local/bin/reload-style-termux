@@ -1,0 +1,3 @@
+#!/bin/bash
+# ref: https://github.com/adi1090x/termux-style/blob/0c0145c3d60537a35b494013c926c3dea88a1e9b/tstyle#L74
+am broadcast --user 0 -a com.termux.app.reload_style com.termux > /dev/null
