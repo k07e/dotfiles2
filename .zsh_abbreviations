@@ -11,4 +11,4 @@ abbr -S --quiet tre=todo-remote
 abbr -S --quiet tsy=todo-sync
 abbr -S --quiet tu=todo-update
 abbr -S --quiet tso=todo-sort
-abbr -S --quiet relogin='exec zsh -l'
+abbr -S --quiet reload-shell='exec zsh -l'

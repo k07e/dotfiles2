@@ -3,7 +3,7 @@ alias e=editor
 alias emacs='env TERM=xterm-direct emacs'
 alias ie=instant-edit
 alias map='cat -n | while read'
-alias relogin='exec bash --login'
+alias reload-shell='exec bash --login'
 alias sponge=sponge-wrapper
 alias ta=todo-append
 alias td=todo-diff
