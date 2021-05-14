@@ -8,7 +8,6 @@ sed -i 's/\(TERM=\)$TERM/\1xterm-256color/' start-debian.sh
   apt-get update
   apt-get upgrade -y
   apt-get install -y apt-utils
-  apt-get install -y debconf
   apt-get install -y dialog
 } </dev/tty
 end
