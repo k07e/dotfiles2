@@ -1,6 +1,7 @@
 alias egrep='egrep --color=auto'
+alias emacs='env TERM=xterm-direct emacs'
 alias fgrep='fgrep --color=auto'
+alias ghq='ghq-wrapper'
 alias grep='grep --color=auto'
 alias ls='ls --color=auto'
-alias emacs='env TERM=xterm-direct emacs'
 alias sponge=sponge-wrapper

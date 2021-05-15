@@ -1,6 +1,7 @@
 alias ..='cd ..'
 alias e=editor
 alias emacs='env TERM=xterm-direct emacs'
+alias ghq='ghq-wrapper'
 alias ie=instant-edit
 alias map='cat -n | while read'
 alias reload-shell='exec bash --login'
