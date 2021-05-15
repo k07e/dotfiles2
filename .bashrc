@@ -126,6 +126,21 @@ if ! shopt -oq posix; then
   fi
 fi
 
+shopt -s autocd
+
+# ref: https://qiita.com/b4b4r07/items/8cf5d1c8b3fbfcf01a5d#%E5%88%A5%E3%81%AE%E6%89%8B%E6%B3%95%E3%81%A7%E8%A9%A6%E3%81%BF%E3%82%8B
+OLDPWD="$PWD"
+function prompt_command {
+  if [ "$OLDPWD" != "$PWD" ]; then
+    OLDPWD="$PWD"
+    chpwd
+  fi
+}
+
+function chpwd {
+  ls
+}
+
 if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
 fi
@@ -143,3 +158,4 @@ function cdghf {
 export EDITOR=editor
 export MANPAGER='nvim +Man!'
 export LESS=$'--mouse --raw-control-chars --wheel-lines=3 --prompt=\033[00m\033[43m \033[00m\033[33m\033[00m '
+export PROMPT_COMMAND='prompt_command'
