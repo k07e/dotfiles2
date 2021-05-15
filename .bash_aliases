@@ -1,3 +1,4 @@
+alias d='cd'
 alias e=editor
 alias emacs='env TERM=xterm-direct emacs'
 alias ghq='ghq-wrapper'

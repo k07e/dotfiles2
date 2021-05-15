@@ -1,3 +1,4 @@
+abbr -a -U -- d 'cd'
 abbr -a -U -- e editor
 abbr -a -U -- ie instant-edit
 abbr -a -U -- l 'ls -CF'
