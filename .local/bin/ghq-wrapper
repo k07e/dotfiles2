@@ -1,0 +1,19 @@
+#!/bin/bash
+set -u
+if type ghq >/dev/null 2>&1; then
+  ghq "$@"
+  exit $?
+fi
+subcommand=$1
+case $subcommand in
+  get )
+    github_repo=$2
+    ghq-get.sh $2
+    ;;
+  list )
+    ghq-list.sh
+    ;;
+  * )
+    echo $subcommand is not a subcommand
+    exit 1
+esac
