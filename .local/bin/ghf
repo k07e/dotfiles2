@@ -1,6 +1,6 @@
 #!/bin/bash
-ghq_root="$(ghq root)"
-fzf_selected="$(ghq list | fzf --preview "ls -alF '$ghq_root/{}'")"
+ghq_root="$(ghq-wrapper root)"
+fzf_selected="$(ghq-wrapper list | fzf --preview "ls -alF '$ghq_root/{}'")"
 if [ -z "$fzf_selected" ]; then
   exit 1
 fi
