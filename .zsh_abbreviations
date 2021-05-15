@@ -4,6 +4,8 @@ abbr -S --quiet ie=instant-edit
 abbr -S --quiet l='ls -CF'
 abbr -S --quiet la='ls -A'
 abbr -S --quiet ll='ls -alF'
+abbr -S --quiet md 'mkdir'
+abbr -S --quiet mf 'touch'
 abbr -S --quiet reload-shell='exec zsh -l'
 abbr -S --quiet ta=todo-append
 abbr -S --quiet td=todo-diff

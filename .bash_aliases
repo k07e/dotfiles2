@@ -4,6 +4,8 @@ alias emacs='env TERM=xterm-direct emacs'
 alias ghq='ghq-wrapper'
 alias ie=instant-edit
 alias map='cat -n | while read'
+alias md='mkdir'
+alias mf='touch'
 alias reload-shell='exec bash --login'
 alias sponge=sponge-wrapper
 alias ta=todo-append

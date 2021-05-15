@@ -4,6 +4,8 @@ abbr -a -U -- ie instant-edit
 abbr -a -U -- l 'ls -CF'
 abbr -a -U -- la 'ls -A'
 abbr -a -U -- ll 'ls -alF'
+abbr -a -U -- md 'mkdir'
+abbr -a -U -- mf 'touch'
 abbr -a -U -- reload-shell 'exec fish'
 abbr -a -U -- ta todo-append
 abbr -a -U -- td todo-diff
