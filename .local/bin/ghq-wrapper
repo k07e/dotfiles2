@@ -13,6 +13,9 @@ case $subcommand in
   list )
     ghq-list.sh
     ;;
+  root )
+    ghq-root.sh
+    ;;
   * )
     echo $subcommand is not a subcommand
     exit 1
