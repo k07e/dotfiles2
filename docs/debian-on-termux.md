@@ -61,3 +61,21 @@ bash {{dotfiles2}}/scripts/patch-env-debian-texlive.bash
 ```
 bash {{dotfiles2}}/scripts/patch-env-debian-devel.bash
 ```
+
+## Others
+
+### Backup
+
+```
+cd {{env-debian}}
+tar -acf ../{{env-debian}}.tar.zst *
+```
+
+### Restore
+
+```
+mkdir {{env-debian}}
+cd {{env-debian}}
+tar -xf ../{{env-debian}}.tar.zst
+bash {{dotfiles2}}/scripts/patch-env-debian-fixing-permission.bash
+```
