@@ -71,6 +71,7 @@ Plug 'preservim/nerdtree'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-rsi'
 Plug 'junegunn/vim-emoji'
+Plug 'tpope/vim-eunuch'
 
 " Git
 Plug 'airblade/vim-gitgutter'
