@@ -71,6 +71,7 @@ Plug 'preservim/nerdtree'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-rsi'
 Plug 'junegunn/vim-emoji'
+Plug 't9md/vim-choosewin'
 
 " Git
 Plug 'airblade/vim-gitgutter'
@@ -233,6 +234,7 @@ let g:eskk#large_dictionary = {
   \ }
 let g:asynctasks_term_pos = 'floaterm'
 let g:sneak#label = 1
+let g:choosewin_overlay_enable = 1
 
 " ref: https://github.com/junegunn/limelight.vim#goyovim-integration
 autocmd! User GoyoEnter Limelight
@@ -421,6 +423,7 @@ nnoremap <silent> [tmux-like]c :tabedit<CR>
 nnoremap <silent> [tmux-like]n :tabnext<CR>
 nnoremap <silent> [tmux-like]o <C-w>w
 nnoremap <silent> [tmux-like]p :tabprevious<CR>
+nmap <silent> [tmux-like]q <Plug>(choosewin)
 nnoremap <silent> [tmux-like]x :call TmuxLike_CloseTab()<CR>
 
 " key mappings for todo
